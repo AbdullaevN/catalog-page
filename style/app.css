@@ -34,195 +34,18 @@
 
 
 }
-/* Общие стили для навбара */
-.navbar {
-    font-family: 'Caros Soft Regular';
-    font-style: normal;
-    width: 100%;
-}
 
- 
-.logo-content {
-    width: 231px; /* Установите ширину и высоту по вашему усмотрению */
-    
-}
-.logo{
-    width: 120px;
-    height: 31px;
-    background-image: url('../assets/logo.png'); /* Основное изображение логотипа */
-    background-size: contain; /* Подгонка изображения по размеру контейнера */
-    background-repeat: no-repeat; /* Избегать повторения изображения */
-    background-position: center; /* Центрирование изображения */
-}
 
-/* Стили для мобильных устройств */
-@media (max-width: 466px) {
-    .logo {
-        width: 95px;
-        background-image: url('../assets/white.png'); /* Изображение логотипа для мобильных устройств */
-    }
-    .logo-content{
-        width: auto;
-    }
-    .navbar>.container{
-        padding: 20px 20px !important;
-    }
-    .cart> .cart-text{
-        display: none;
-    }
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.navbar .container,
-.footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
  
 
 
-.navbar .nav-links {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
 
-.navbar .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 12px;
-    padding: 5px 10px;
-}
 
-.navbar .nav-buttons {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    gap: 3px;
-    margin-right: 10px;
-}
 
-.navbar .nav-buttons .button {
-    border: 1px solid #ddd;
-    border-radius: 57%;
-    padding: 8px;
-    display: flex;
-    cursor: pointer;
-    position: relative;
-    margin: 0px 7px;
-    background-color: white;
-}
-
-.navbar .nav-buttons .cart {
-    border-radius: 25px !important;
-    font-size: 12px;
-    padding: 0 18px;
-    border: 1px solid #ddd;
-    border-radius: 57%;
-    align-items: center;
-    display: flex;
-    cursor: pointer;
-    position: relative;
-    margin: 0px 7px;
-}
-
-.navbar .nav-buttons .button img {
-    width: 20px;
-    height: 20px;
-}
-
-.navbar .nav-buttons .cart .badge {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    background-color: red;
-    color: #fff;
-    border-radius: 50%;
-    padding: 2px 5px;
-    font-size: 9px;
-}
-
-/* Стили для мобильного меню */
-.hamburger {
-    display: flex; /* Сделать элемент flex-контейнером */
-    flex-direction: column; /* Разместить дочерние элементы по колонке */
-    justify-content: space-around; /* Распределить пространство между элементами */
-    width: 30px; /* Ширина гамбургера */
-    height: 25px; /* Высота гамбургера */
-    cursor: pointer; /* Указатель курсора как "pointer" для кликабельности */
-    flex-wrap: wrap-reverse;
-
-}
-
-.hamburger span {
-    display: block;  
-    background-color: white; /* Цвет фона белый */
-    transition: all 0.3s; 
-}
-
-.hamburger span:nth-child(1) {
-    width: 100%; /* Полная ширина */
-    height: 2px; /* Высота верхнего спана */
-}
-
-.hamburger span:nth-child(2) {
-    width: 75%; /* Ширина в 75% от полной ширины */
-    height: 2px; /* Меньшая высота для среднего спана */
-}
-
-.hamburger span:nth-child(3) {
-    width: 50%; /* Ширина в 50% от полной ширины */
-    height: 2px; /* Ещё меньшая высота для нижнего спана */
-}
-
-.mobile-nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #f8f8f8;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-}
-
-.mobile-nav-links.open {
-    display: flex;
-}
-
-.mobile-nav-links a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px 20px;
-    display: block;
-}
 
 /* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 768px) {
-    .navbar .nav-links {
-        display: none;
-    }
-    .navbar{
-        background-color: #EE575C;
-    }
-    .navbar .nav-buttons{
-        margin-right: 1px;
-    }
-    .hamburger {
-        display: flex;
-    }
-
+    
 
     .sort-button{
         display: none !important;
@@ -230,6 +53,7 @@
     .sort-button-mobile{
         display: flex;
     }
+    
 }
 
 /*  */
@@ -238,143 +62,6 @@
 }
 
  
-
-@font-face {
-    font-family: "Core Sans C";
-    src: url("../assets/fonts/caro/CoreSansC-45Regular.ttf");
-    font-weight: 400; /* Regular */
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Core Sans C";
-    src: url("../assets/fonts/caro/CoreSansC-55Medium.ttf");
-    font-weight: 500; /* Medium */
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Core Sans C";
-    font-weight: 300; /*  */
-    font-style: normal;
-    src: url("../assets/fonts/caro/CoreSansC-35Light.ttf");
-}
-@font-face {
-    font-family: "Core Sans C";
-    src: url("../assets/fonts/caro/CoreSansC-65Bold.ttf");
-    font-weight: 700; /* Bold */
-    font-style: normal;
-}
-footer {
-    background-color: #353945;
-    /* padding: 40px 20px; */
-    font-family: "Core Sans C";
-
-}
-
-
-
-.footer-section {
-    flex: 1;
-    min-width: 190px;
-    margin: 9px;
-    padding: 30px 0;
-}
-.footer-section:first-child {
-    flex: 2;  
-    min-width: 230px;
-
-}
-
-.footer-section h2.logo {
-    font-size: 24px;
-    color: #f44336;
-    margin-bottom: 10px;
-}
-
-.footer-section h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-family: "Core Sans C";
-    font-weight: normal; 
-    color: #fff;
-}
-
-.footer-section p {
-    margin: 0 0 10px;
-    font-size: 12px;
-    color: #B7B7B7;
-    padding: 20px 0;
-    font-family: "Core Sans C";
-    font-style: 400; 
-
-
-
-}
-
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-section ul li {
-    margin: 5px 0;  
-    font-family: "Core Sans C";
-    font-weight: 300; /*  */
-    font-style: normal;
-
-
-}
-
-.footer-section ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-style: normal;
-    color: #999999;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
-}
-
-.contact-numbers {
-    margin: 10px 0;
-}
-
-.contact-numbers a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: #1A1A1A;
-    border-bottom: 1px solid red;
-    padding: 10px 3px;
-    font-size: 12px;
-}
-
-.contact-numbers a:hover {
-    text-decoration: underline;
-}
-
-.contact-numbers span {
-    margin: 0 10px;
-    color: #B7B7B7;
-    font-size: 12px;
-}
- 
-.footer-bottom{
- 
-  background-color: #272B38;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  bottom: 0;
-  padding: 0 90px;
-  color: #808080;
-
-}
-
 
  /*  */
 
@@ -387,14 +74,7 @@ h1 {
 }
 
  
-/* Основные стили */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 
 .catalog-main {
     width: 100%;
@@ -605,11 +285,11 @@ h1 {
 /* Показываем панель на десктопе */
 @media (min-width: 769px) {
     .sidebar {
-        display: block; /* Всегда видима на десктопе */
+        display: block;  
     }
 
     .category-button {
-        display: none; /* Скрыть кнопку на десктопе */
+        display: none;  
     }
 }@media (max-width: 768px) {
    
@@ -634,6 +314,19 @@ h1 {
     .product-card {
         width: 100% !important;
     }
+    .contact-numbers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-numbers>a{
+        font-size: 14px;
+        padding: 9px 2px;
+    }
+    .pagination{
+        display: none !important;
+    }
+    
     
 }
 

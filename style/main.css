@@ -1,10 +1,3 @@
-.navbar {
-    font-family: 'Caros Soft Regular';
-    font-style: normal;
-    width: 100%;
-}
-
- 
 
 .container {
     display: flex;
@@ -12,6 +5,14 @@
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+}
+ 
+ 
+/* Общие стили для навбара */
+.navbar {
+    font-family: 'Caros Soft Regular';
+    font-style: normal;
+    width: 100%;
 }
 
 .navbar .container,
@@ -21,10 +22,8 @@
     align-items: center;
     padding: 20px 0;
 }
+ 
 
-.navbar .logo {
-    flex: 1;
-}
 
 .navbar .nav-links {
     flex: 2;
@@ -56,6 +55,7 @@
     cursor: pointer;
     position: relative;
     margin: 0px 7px;
+    background-color: white;
 }
 
 .navbar .nav-buttons .cart {
@@ -89,20 +89,35 @@
 
 /* Стили для мобильного меню */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
+    display: flex; /* Сделать элемент flex-контейнером */
+    flex-direction: column; /* Разместить дочерние элементы по колонке */
+    justify-content: space-around; /* Распределить пространство между элементами */
+    width: 30px; /* Ширина гамбургера */
+    height: 25px; /* Высота гамбургера */
+    cursor: pointer; /* Указатель курсора как "pointer" для кликабельности */
+    flex-wrap: wrap-reverse;
+
 }
 
 .hamburger span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: red;
-    transition: all 0.3s;
+    display: block;  
+    background-color: white; /* Цвет фона белый */
+    transition: all 0.3s; 
+}
+
+.hamburger span:nth-child(1) {
+    width: 100%; /* Полная ширина */
+    height: 2px; /* Высота верхнего спана */
+}
+
+.hamburger span:nth-child(2) {
+    width: 75%; /* Ширина в 75% от полной ширины */
+    height: 2px; /* Меньшая высота для среднего спана */
+}
+
+.hamburger span:nth-child(3) {
+    width: 50%;     
+    height: 2px;  
 }
 
 .mobile-nav-links {
@@ -119,30 +134,235 @@
 
 .mobile-nav-links.open {
     display: flex;
+    z-index: 9999;
+    height: 100%;
+    background-color: #EE575C;
+    color: #fff;
+    /* justify-content: center; */
+    align-items: start;
+    text-align: start;
 }
 
 .mobile-nav-links a {
     text-decoration: none;
-    color: #333;
-    padding: 10px 20px;
+    color: #fff;
+    /* padding: 10px 20px; */
     display: block;
+    font-size: 29px;
 }
+
+.logo-content {
+    width: 231px; /* Установите ширину и высоту по вашему усмотрению */
+    
+}
+.logo{
+    width: 120px;
+    height: 31px;
+    background-image: url('../assets/logo.png'); /* Основное изображение логотипа */
+    background-size: contain; /* Подгонка изображения по размеру контейнера */
+    background-repeat: no-repeat; /* Избегать повторения изображения */
+    background-position: center; /* Центрирование изображения */
+}
+
 
 /* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 768px) {
     .navbar .nav-links {
         display: none;
     }
-    
+    .navbar{
+        background-color: #EE575C;
+    }
+    .navbar .nav-buttons{
+        margin-right: 1px;
+    }
     .hamburger {
         display: flex;
     }
 
 
-    .sort-button{
-        display: none !important;
+
+    /* footer */
+
+    .footer-bottom>.moore{
+        display: none;
     }
-    .sort-button-mobile{
+    .footer-bottom {
+        font-size: 12px; /* Уменьшите размер шрифта на мобильных устройствах */
+        padding: 5px; 
         display: flex;
+        justify-content: center; /* Центрирует содержимое по горизонтали */
+        align-items: center;     /* Центрирует содержимое по вертикали */
+        text-align: center;      /* Выравнивание текста внутри блока */
+        padding: 10px;           /* Отступы вокруг содержимого */
+        box-sizing: border-box; 
+        white-space: nowrap;
     }
+
+}
+
+
+
+@media (max-width: 466px) {
+    .logo {
+        width: 95px;
+        background-image: url('../assets/white.png'); /* Изображение логотипа для мобильных устройств */
+    }
+    .logo-content{
+        width: auto;
+    }
+    .navbar>.container{
+        padding: 20px 20px !important;
+    }
+    .cart> .cart-text{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: "Core Sans C";
+    src: url("../assets/fonts/caro/CoreSansC-45Regular.ttf");
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Core Sans C";
+    src: url("../assets/fonts/caro/CoreSansC-55Medium.ttf");
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Core Sans C";
+    font-weight: 300; /*  */
+    font-style: normal;
+    src: url("../assets/fonts/caro/CoreSansC-35Light.ttf");
+}
+@font-face {
+    font-family: "Core Sans C";
+    src: url("../assets/fonts/caro/CoreSansC-65Bold.ttf");
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+footer {
+    background-color: #353945;
+    /* padding: 40px 20px; */
+    font-family: "Core Sans C";
+
+}
+
+
+
+.footer-section {
+    flex: 1;
+    min-width: 150px;
+    margin: 9px;
+    padding: 30px 0;
+}
+.footer-section:first-child {
+    flex: 2;  
+    min-width: 230px;
+
+}
+
+.footer-section h2.logo {
+    font-size: 24px;
+    color: #f44336;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: "Core Sans C";
+    font-weight: normal; 
+    color: #fff;
+}
+
+.footer-section p {
+    margin: 0 0 10px;
+    font-size: 12px;
+    color: #B7B7B7;
+    padding: 20px 0;
+    font-family: "Core Sans C";
+    font-style: 400; 
+
+
+
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;  
+    font-family: "Core Sans C";
+    font-weight: 300; /*  */
+    font-style: normal;
+
+
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-style: normal;
+    color: #999999;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-numbers {
+    margin: 10px 0;
+}
+
+.contact-numbers a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #1A1A1A;
+    border-bottom: 1px solid red;
+    padding: 10px 3px;
+    font-size: 12px;
+}
+
+.contact-numbers a:hover {
+    text-decoration: underline;
+}
+
+.contact-numbers span {
+    margin: 0 10px;
+    color: #B7B7B7;
+    font-size: 12px;
+}
+ 
+.footer-bottom{
+ 
+  background-color: #272B38;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  padding: 0 90px;
+  color: #808080;
+
 }

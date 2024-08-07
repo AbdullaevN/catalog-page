@@ -15,8 +15,9 @@
     <!-- NAVBAR -->
     <div class="navbar">
         <div class="container">
-            <div class="logo">
-                <img src="./assets/logo.png" alt="Logo" width="100">
+            <div class="logo-content">
+            <div class="logo"></div>
+
             </div>
             <div class="nav-links">
                 <a href="#">Главная</a>
@@ -39,7 +40,7 @@
                     </svg>
                 </div>
                 <div class="button cart">
-                    <span>корзина</span>
+                    <span class="cart-text">корзина</span>
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 2.4375C1.93934 2.4375 1.6875 2.68934 1.6875 3C1.6875 3.31066 1.93934 3.5625 2.25 3.5625C2.86279 3.5625 3.39336 3.98811 3.52629 4.5863L3.84874 6.03731C3.85108 6.07255 3.85676 6.10779 3.86587 6.14256L3.90708 6.29985L3.95089 6.49702C3.95951 6.5358 3.97194 6.57274 3.9877 6.60755L5.24408 11.4029C5.6546 12.9698 7.07049 14.0625 8.69026 14.0625H12.5629C14.5305 14.0625 16.1254 12.4675 16.1254 10.5V8.46801C16.1254 8.0451 16.0645 7.53485 15.7775 7.08466C15.1319 6.0717 14.0055 5.4375 12.7735 5.4375H4.86789L4.6245 4.34226C4.37718 3.22933 3.39007 2.4375 2.25 2.4375ZM6.33235 11.1178L5.13886 6.5625H12.7735C13.6162 6.5625 14.3871 6.99626 14.8288 7.68934C14.9483 7.87671 15.0004 8.13486 15.0004 8.46801V10.5C15.0004 11.8462 13.9091 12.9375 12.5629 12.9375H8.69026C7.582 12.9375 6.61323 12.1899 6.33235 11.1178Z" fill="#686868"/>
                         <path d="M12.75 16.5C13.1642 16.5 13.5 16.1642 13.5 15.75C13.5 15.3358 13.1642 15 12.75 15C12.3358 15 12 15.3358 12 15.75C12 16.1642 12.3358 16.5 12.75 16.5Z" fill="#686868"/>
@@ -63,7 +64,6 @@
         <a href="#">Новости</a>
         <a href="#">Контакты</a>
     </div>
-
     <!--  -->
 
 
@@ -124,22 +124,25 @@
 
                         <div class="info-section-details">
                             <div class="details">
-                                <div>Цвета корпуса</div>
+                                <h4>Цвета корпуса</h4>
                                 <div class="details-color-options">
-                                    <div style="background-color: #000;"></div>
-                                    <div style="background-color: #8b4513;"></div>
-                                    <div style="background-color: #808080;"></div>
-                                    <div style="background-color: #008000;"></div>
-                                    <div style="background-color: #00ced1;"></div>
-                                    <div style="background-color: #4682b4;"></div>
-                                    <div style="background-color: #1e90ff;"></div>
-                                    <div style="background-color: #000080;"></div>
-                                    <div style="background-color: #800080;"></div>
-                                    <div style="background-color: #000;"></div>
-                                    <div style="background-color: #fff; border: 1px solid #000;"></div>
+                                    <div style="background-color: #FF975D;"></div>
+                                    <div style="background-color: #863D13;"></div>
+                                    <div style="background-color: #FFDB5D;"></div>
+                                    <div style="background-color: #C9B87C;"></div>
+                                    <div style="background-color: #74FF5D;"></div>
+                                    <div style="background-color: #2DC015;"></div>
+                                    <div style="background-color: #5DE2FF;"></div>
+                                    <div style="background-color: #82B3BE;"></div>
+                                    <div style="background-color: #5DA8FF;"></div>
+                                    <div style="background-color: #3D597A;"></div>
+                                    <div style="background-color: #FF5DF9; "></div>
+                                    <div style="background-color: #000000;"></div>
+                                    <div style="background-color: #fff; border: 1px solid gray;"></div>
+
                                 </div>
 
-                                <div style="margin-top: 20px;">
+                                <div class="price" style="margin-top: 20px;">
                                     <div class="details-price">9999с.</div>
                                     <div class="details-old-price">99 999с.</div>
                                 </div>
@@ -162,8 +165,9 @@
                                 </div>
 
                             </div>
-                            <div>
-                                iuho
+                            <div class="size">
+                                <h4>Размер</h4>
+                                <p class="size-desc">40мм x 40 мм | Макс. размер клише с защитным колпачком.</p>
                             </div>
 
 
@@ -171,6 +175,7 @@
                         </div>
 
                     </div>
+                    
                 </div>
 
             </div>
@@ -275,7 +280,7 @@
     <footer>
         <div class="container">
             <div class="footer-section">
-                <div class="logo">
+                <div class="footer-logo">
                     <img src="./assets/logo.png" alt="Logo" width="100">
                 </div>
                 <p>Крупнейший производитель оснасток для печатей и штампов в мире</p>
@@ -290,8 +295,10 @@
                 <ul>
                     <li><a href="#">Категории</a></li>
                     <li><a href="#">О компании</a></li>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="#" style="color:#fff">Новости</a></li>
                     <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Профиль</a></li>
+    
                 </ul>
             </div>
             <div class="footer-section">
@@ -306,24 +313,26 @@
             <div class="footer-section">
                 <h3>Штампы</h3>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Датер</a></li>
+                    <li><a href="#">Овальные</a></li>
+                    <li><a href="#">Бухгалтерские</a></li>
+                    <li><a href="#">Угловые</a></li>
+                    <li><a href="#">Банковские</a></li>
+    
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Контакты</h3>
                 <ul>
-                    <li><a href="#">Fruit & Vegetables</a></li>
-                    <li><a href="#">Meat & Fish</a></li>
-                    <li><a href="#">Bread & Bakery</a></li>
-                    <li><a href="#">Beauty & Health</a></li>
+                    <li><a href="#">trodatkg@gmail.com</a></li>
+                    <li><a href="#">Токтогула 125/1 (Бизнес центр Avangard), Bishkek, Kyrgyzstan</a></li>
+                    <!-- <li><a href="#">Bread & Bakery</a></li>
+                    <li><a href="#">Beauty & Health</a></li> -->
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <div>
+            <div class="moore">
                 <svg width="94" height="30" viewBox="0 0 94 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5" clip-path="url(#clip0_0_5187)">
                     <path d="M0.941406 25.6944C1.11651 25.65 1.34634 25.6028 1.63089 25.5528C1.92091 25.5029 2.2547 25.4779 2.63228 25.4779C2.90588 25.4779 3.13571 25.5167 3.32176 25.5945C3.50781 25.6666 3.66376 25.7749 3.78962 25.9193C3.82793 25.8915 3.88812 25.8526 3.9702 25.8027C4.05228 25.7527 4.15351 25.7055 4.2739 25.6611C4.39429 25.6111 4.52835 25.5695 4.6761 25.5362C4.82384 25.4973 4.98253 25.4779 5.15217 25.4779C5.48049 25.4779 5.74862 25.5278 5.95656 25.6278C6.1645 25.7222 6.32593 25.8582 6.44084 26.0359C6.56123 26.2135 6.64057 26.4245 6.67888 26.6688C6.72265 26.9131 6.74454 27.1796 6.74454 27.4683V29.9001H5.98119V27.6348C5.98119 27.3794 5.96751 27.1601 5.94015 26.9769C5.91826 26.7937 5.87175 26.641 5.80061 26.5189C5.73494 26.3967 5.64192 26.3079 5.52153 26.2524C5.40662 26.1913 5.25614 26.1608 5.07009 26.1608C4.8129 26.1608 4.59949 26.1969 4.42985 26.269C4.26569 26.3357 4.15351 26.3967 4.09332 26.4523C4.1371 26.5966 4.16993 26.7548 4.19182 26.927C4.21371 27.0991 4.22465 27.2795 4.22465 27.4683V29.9001H3.4613V27.6348C3.4613 27.3794 3.44762 27.1601 3.42026 26.9769C3.3929 26.7937 3.34365 26.641 3.27251 26.5189C3.20685 26.3967 3.11382 26.3079 2.99343 26.2524C2.87852 26.1913 2.73077 26.1608 2.5502 26.1608C2.47359 26.1608 2.39151 26.1635 2.30395 26.1691C2.2164 26.1747 2.13158 26.183 2.0495 26.1941C1.97289 26.1996 1.90176 26.208 1.83609 26.2191C1.77043 26.2302 1.72665 26.2385 1.70476 26.2441V29.9001H0.941406V25.6944Z" fill="white"/>
