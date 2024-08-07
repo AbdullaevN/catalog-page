@@ -176,7 +176,44 @@ products.forEach(product => {
 
 productContainer.appendChild(productCard);
 });
+ 
 
 
 
+// 
+// 
+// 
+//
 
+document.addEventListener('DOMContentLoaded', function() {
+
+    const categoryButton = document.querySelector('.category-button');
+    const sidebar = document.querySelector('.sidebar');
+
+    function toggleSidebar() {
+        // Проверяем, видима ли боковая панель
+        if (sidebar.style.display === 'block' || sidebar.classList.contains('open')) {
+            sidebar.style.display = 'none';
+            sidebar.classList.remove('open');
+        } else {
+            sidebar.style.display = 'block';
+            sidebar.classList.add('open');
+        }
+    }
+
+    function handleResize() {
+        if (window.innerWidth <= 768) {
+            // Для мобильных устройств добавляем обработчик на кнопку и показываем панель при клике
+            categoryButton.addEventListener('click', toggleSidebar);
+            sidebar.style.display = 'none'; // По умолчанию скрыта
+        } else {
+            // Для десктопов убираем обработчик события и показываем панель
+            categoryButton.removeEventListener('click', toggleSidebar);
+            sidebar.style.display = 'block'; // Всегда видима
+        }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Инициализация при загрузке страницы
+
+});
