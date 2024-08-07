@@ -1,3 +1,80 @@
+//image slider
+
+const images = [
+    { id: 1, image: "./assets/single/small-image4.png" },
+    { id: 2, image: "./assets/single/small-image2.png" },
+    { id: 3, image: "./assets/single/small-image3.png" },
+    { id: 4, image: "./assets/single/small-image1.png" }, // This is the last image
+];
+
+const sliderImage = document.getElementById('slider-image');
+const dotsContainerImage = document.getElementById('dots-container-image');
+
+// Создание карточек
+images.forEach((image, index) => {
+    const productCardImage = document.createElement('div');
+    productCardImage.className = 'main-image';
+    productCardImage.innerHTML = `
+        <img src="${image.image}" alt="${image.name}" class="image-product-image">
+        ${index === images.length - 1 ? '<div class="overlay-text">+2</div>' : ''}
+    `;
+    sliderImage.appendChild(productCardImage);
+});
+// Создание точек
+images.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.className = 'image-dot';
+    if (index === 0) dot.classList.add('active');
+});
+
+let currentSlideImage = 0;
+
+const slidesImage = document.querySelectorAll('.image-image');
+const dotsImage = document.querySelectorAll('.image-dot');
+
+document.querySelector('.prev').addEventListener('click', () => {
+    currentSlideImage = (currentSlideImage > 0) ? currentSlideImage - 1 : slidesImage.length - 1;
+    updateSliderImage();
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    currentSlideImage = (currentSlideImage < slidesImage.length - 1) ? currentSlideImage + 1 : 0;
+    updateSliderImage();
+});
+
+dotsImage.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlideImage = index;
+        updateSliderImage();
+    });
+});
+
+function updateSliderImage() {
+    const offset = -currentSlideImage * 213; // Ширина карточки + gap
+    sliderImage.style.transform = `translateX(${offset}px)`;
+
+    
+
+ 
+}
+
+updateSliderImage();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // example dinamic 
 const example = [
     { id: 1, image: "./assets/single/1.png" },
@@ -68,7 +145,7 @@ function updateSlider1() {
 }
 
 updateSlider1();
-
+// 
 
 const data = [
     {
